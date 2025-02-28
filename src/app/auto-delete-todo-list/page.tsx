@@ -39,18 +39,22 @@ export default function AutoDeleteTodoList() {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-100 p-10">
-      <h1 className="text-3xl font-bold mb-6">Auto Delete Todo List</h1>
+    <div className="flex flex-col items-center min-h-screen bg-gradient-to-r from-blue-100 to-blue-300 p-10">
+      <h1 className="text-4xl font-extrabold mb-6 text-gray-800 animate-fade-in">
+        Auto Delete Todo List
+      </h1>
 
       <div className="flex gap-10 w-full max-w-4xl">
         {/* Main List */}
-        <div className="w-1/3 p-4 bg-white rounded-lg shadow-md">
-          <h2 className="text-lg font-semibold mb-2">Main List</h2>
+        <div className="w-1/3 p-4 bg-white rounded-lg shadow-lg transform transition-transform hover:scale-105">
+          <h2 className="text-lg font-semibold mb-2 text-gray-700">
+            Main List
+          </h2>
           {mainList.map((item) => (
             <button
               key={item.name}
               onClick={() => moveToColumn(item)}
-              className="block w-full text-left bg-gray-200 hover:bg-gray-300 p-2 rounded mt-2"
+              className="block w-full text-left bg-gray-200 hover:bg-gray-300 p-2 rounded mt-2 transition-colors"
             >
               {item.name}
             </button>
@@ -58,13 +62,13 @@ export default function AutoDeleteTodoList() {
         </div>
 
         {/* Fruits Column */}
-        <div className="w-1/3 p-4 bg-green-100 rounded-lg shadow-md">
-          <h2 className="text-lg font-semibold mb-2">Fruits</h2>
+        <div className="w-1/3 p-4 bg-green-100 rounded-lg shadow-lg transform transition-transform hover:scale-105">
+          <h2 className="text-lg font-semibold mb-2 text-green-700">Fruits</h2>
           {fruits.map((item) => (
             <button
               key={item.name}
               onClick={() => moveBackToMain(item)}
-              className="block w-full text-left bg-green-300 hover:bg-green-400 p-2 rounded mt-2"
+              className="block w-full text-left bg-green-300 hover:bg-green-400 p-2 rounded mt-2 transition-colors"
             >
               {item.name}
             </button>
@@ -72,13 +76,15 @@ export default function AutoDeleteTodoList() {
         </div>
 
         {/* Vegetables Column */}
-        <div className="w-1/3 p-4 bg-yellow-100 rounded-lg shadow-md">
-          <h2 className="text-lg font-semibold mb-2">Vegetables</h2>
+        <div className="w-1/3 p-4 bg-yellow-100 rounded-lg shadow-lg transform transition-transform hover:scale-105">
+          <h2 className="text-lg font-semibold mb-2 text-yellow-700">
+            Vegetables
+          </h2>
           {vegetables.map((item) => (
             <button
               key={item.name}
               onClick={() => moveBackToMain(item)}
-              className="block w-full text-left bg-yellow-300 hover:bg-yellow-400 p-2 rounded mt-2"
+              className="block w-full text-left bg-yellow-300 hover:bg-yellow-400 p-2 rounded mt-2 transition-colors"
             >
               {item.name}
             </button>
