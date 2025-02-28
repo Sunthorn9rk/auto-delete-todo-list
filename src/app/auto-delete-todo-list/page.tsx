@@ -3,7 +3,7 @@ import {useState, useRef} from "react";
 import {TodoItem} from "@/types";
 import {todoItems} from "@/data";
 
-export default function autodeletetodolist() {
+export default function AutoDeleteTodoList() {
   const [mainList, setMainList] = useState<TodoItem[]>(todoItems);
   const [fruits, setFruits] = useState<TodoItem[]>([]);
   const [vegetables, setVegetables] = useState<TodoItem[]>([]);
