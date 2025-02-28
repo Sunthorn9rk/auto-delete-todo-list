@@ -1,7 +1,7 @@
 "use client";
 import {useEffect, useState} from "react";
-import {fetchUsers} from "../utils/api";
-import {transformUsers} from "../utils/transform";
+import {fetchUsers} from "../../utils/api";
+import {transformUsers} from "../../utils/transform";
 
 export default function UserTable() {
   interface DepartmentData {
